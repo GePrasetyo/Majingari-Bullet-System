@@ -1,9 +1,9 @@
-using ShootingGames.Pool;
-using ShootingGames.UI;
+using Majingari.Framework.Pool;
+using BulletSystem.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootingGames.GameState {
+namespace BulletSystem.GameState {
     /// <summary>
     /// Title Screen Loop
     /// </summary>

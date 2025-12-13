@@ -1,10 +1,10 @@
-using ShootingGames.Gun;
-using ShootingGames.Pool;
+using BulletSystem.Gun;
+using Majingari.Framework.Pool;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootingGames.GameState {
+namespace BulletSystem.GameState {
     /// <summary>
     /// Stage main loop
     /// </summary>

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public class GameStats {
         public int gameScore { get; private set; } = 0;
         public int combo { get; private set; } = 0;

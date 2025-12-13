@@ -1,8 +1,8 @@
-using ShootingGames.Pool;
-using ShootingGames.Utils;
+using Majingari.Framework.Pool;
+using Majingari.Framework;
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class RicochetProjectile : Fire {
         private TrailRenderer prefabKey;
 

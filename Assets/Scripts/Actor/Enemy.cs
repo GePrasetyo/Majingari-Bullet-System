@@ -1,9 +1,9 @@
-using ShootingGames.Movement;
-using ShootingGames.Utils;
+using BulletSystem.Movement;
+using Majingari.Framework;
 using System;
 using UnityEngine;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public class Enemy : Actor, IHitable {
         public const byte Team = 2;
         [SerializeField] private Material aliveMaterial;

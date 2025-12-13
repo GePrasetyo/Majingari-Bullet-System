@@ -58,6 +58,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -135,10 +138,10 @@ MonoBehaviour:
   deadMaterial: {fileID: 2100000, guid: ab11950b44b6ab647a4d0756b11d3e4b, type: 2}
   render: {fileID: 3679359923913349700}
   movement:
-    rid: 8925277522752176133
+    rid: 5399962494762221782
   postMovement:
   - mover:
-      rid: 8925277522752176132
+      rid: 5399962494762221781
   originalSize: {x: 1, y: 1, z: 1}
   pulseSize: {x: 1.1, y: 1.1, z: 1.1}
   deadSize: {x: 0.7, y: 0.7, z: 0.7}
@@ -149,14 +152,14 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8925277522752176132
-      type: {class: PostMove2DSpaceWrapper, ns: ShootingGames.Movement, asm: Assembly-CSharp}
+    - rid: 5399962494762221781
+      type: {class: PostMove2DSpaceWrapper, ns: BulletSystem.Movement, asm: Assembly-CSharp}
       data:
         transform: {fileID: 3552601029668085723}
         position: 1
         rotation: 0
-    - rid: 8925277522752176133
-      type: {class: PushForceMovement, ns: ShootingGames.Movement, asm: Assembly-CSharp}
+    - rid: 5399962494762221782
+      type: {class: PushForceMovement, ns: BulletSystem.Movement, asm: Assembly-CSharp}
       data:
         rigidbody: {fileID: 1482555287743958093}
         rotationDirection: {x: 1, y: 1, z: 0}

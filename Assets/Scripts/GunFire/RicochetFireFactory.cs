@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     [CreateAssetMenu(fileName = "Ricochet Fire Factory", menuName = "Shooting Games Scriptable/Fire/Ricochet Fire Factory")]
     public class RicochetFireFactory : GunFireFactory, IFireFactory<RicochetProjectile> {
         [SerializeField] private TrailRenderer visualProjectilePrefab;

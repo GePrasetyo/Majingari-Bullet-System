@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public class PlayerInput : MonoBehaviour {
         [SerializeField] private InputActionReference inputActionMainAxis;
         [SerializeField] private InputActionReference inputActionSwitchGun;

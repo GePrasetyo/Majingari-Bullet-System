@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace ShootingGames.UI {
+namespace BulletSystem.UI {
     public class ResultHUD : MonoBehaviour {
         [SerializeField] private TextMeshProUGUI resultScore;
         [SerializeField] private TextMeshProUGUI maxCombo;

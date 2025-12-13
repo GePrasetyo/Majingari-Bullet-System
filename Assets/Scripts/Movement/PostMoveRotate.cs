@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.Movement {
+namespace BulletSystem.Movement {
     public class PostMoveRotate : PostMovementAdjuster {
         [SerializeField] private Transform transform;
         [SerializeField] private Vector3 rotationDirection = new Vector3(1, 1, 0);

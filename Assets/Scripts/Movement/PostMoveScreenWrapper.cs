@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace ShootingGames.Movement {
+namespace BulletSystem.Movement {
     [Serializable]
     public class PostMoveScreenWrapper : PostMovementAdjuster {
         [SerializeField] private Transform transform;

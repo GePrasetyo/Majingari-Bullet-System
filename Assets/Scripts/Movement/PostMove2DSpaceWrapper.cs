@@ -1,7 +1,7 @@
-using ShootingGames.Utils;
+using Majingari.Framework;
 using UnityEngine;
 
-namespace ShootingGames.Movement {
+namespace BulletSystem.Movement {
     public class PostMove2DSpaceWrapper : PostMovementAdjuster {
         [SerializeField] private Transform transform;
         [SerializeField] private bool position = true;

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public abstract class BaseGun : IDisposable {
         protected GunFireSystem gunFireSystem;
         protected Transform gunPoint;

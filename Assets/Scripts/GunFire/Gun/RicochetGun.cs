@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class RicochetGun : BaseGun {
         private int totalAmmo;
 

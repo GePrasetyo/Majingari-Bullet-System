@@ -1,7 +1,7 @@
 using System;
 using UnityEngine.InputSystem;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public abstract class InputFireSystem : IDisposable {
         protected InputActionReference playerInput { get; init; }
         public abstract void InputTick(BaseGun gun, out InputFireStatus fireStatus);

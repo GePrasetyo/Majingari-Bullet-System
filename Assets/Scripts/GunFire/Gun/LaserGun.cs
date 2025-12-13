@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class LaserGun : BaseGun {
         private int maxAmmo;
         private float currentAmmo;

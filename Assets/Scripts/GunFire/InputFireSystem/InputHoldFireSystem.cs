@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class InputHoldFireSystem : InputFireSystem {
         private InputHoldParam holdData;
 

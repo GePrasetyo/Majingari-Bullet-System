@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public static class GunFireSystemCollection {
         private static Dictionary<GunFireFactory, GunFireSystem> projectileSystems = new Dictionary<GunFireFactory, GunFireSystem>();
 

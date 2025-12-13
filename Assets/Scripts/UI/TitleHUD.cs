@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace ShootingGames.UI {
+namespace BulletSystem.UI {
     public class TitleHUD : MonoBehaviour {
         [SerializeField] private TextMeshProUGUI lastScoreText;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.GameState {
+namespace BulletSystem.GameState {
     public abstract class StateLoop : MonoBehaviour {
         public StateRequest request { get; protected set; } = StateRequest.Sleep;
 

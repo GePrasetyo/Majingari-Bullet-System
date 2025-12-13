@@ -1,6 +1,6 @@
 using System;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public interface IHitable {
         public bool IsHitValid(HitID id);
         public void OnHit();

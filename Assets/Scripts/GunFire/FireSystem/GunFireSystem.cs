@@ -1,4 +1,4 @@
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public abstract class GunFireSystem : ITickObject {
         public virtual void Initialize() {
             GameInstance.Instance.RegisterTick(this);

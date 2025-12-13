@@ -1,9 +1,9 @@
-using ShootingGames.GameState;
+using BulletSystem.GameState;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public class GameInstance : MonoBehaviour {
         public static GameInstance Instance { get; private set; }
         public GameStats Stats { get; private set; } = new GameStats();

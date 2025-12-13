@@ -1,14 +1,14 @@
-using ShootingGames.GameState;
-using ShootingGames.Gun;
-using ShootingGames.Movement;
-using ShootingGames.Pool;
-using ShootingGames.UI;
-using ShootingGames.Utils;
+using BulletSystem.GameState;
+using BulletSystem.Gun;
+using BulletSystem.Movement;
+using Majingari.Framework;
+using Majingari.Framework.Pool;
+using BulletSystem.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public class Player : Actor, IHitable {
         public const byte Team = 1;
         private PlayerController playerController;

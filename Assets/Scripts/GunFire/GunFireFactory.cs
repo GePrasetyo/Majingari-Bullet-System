@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public abstract class GunFireFactory : ScriptableObject {
         [SerializeField] protected InputActionReference playerInput;
         [field: SerializeField] protected float bulletLifeTime = 4f;

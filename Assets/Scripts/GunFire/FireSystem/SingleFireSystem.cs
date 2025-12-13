@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class SingleFireSystem<T> : GunFireSystem where T : Fire {
         private List<T> projectilesData = new List<T>();
         private Stack<T> poolProjectile = new Stack<T>();

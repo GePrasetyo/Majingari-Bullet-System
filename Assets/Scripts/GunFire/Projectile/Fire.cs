@@ -1,7 +1,7 @@
-using ShootingGames.Utils;
+using Majingari.Framework;
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public abstract class Fire {
         public const int collisionLayers = 1 << 0 | 1 << 3;
 

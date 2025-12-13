@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class BasicGun : BaseGun {
         public override int TotalAmmo => 1;
         public override int GetAmmo => 1;

@@ -1,11 +1,11 @@
-using ShootingGames.GameState;
-using ShootingGames.Pool;
+using BulletSystem.GameState;
+using Majingari.Framework.Pool;
 using System.Collections.Generic;
 using UnityEngine;
 
 using Random = UnityEngine.Random;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public class EnemySpawner : MonoBehaviour {
         [Header("Prefab")]
         public Enemy prefabEnemy;

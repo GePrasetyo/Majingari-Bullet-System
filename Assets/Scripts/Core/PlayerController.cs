@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames {
+namespace BulletSystem {
     public class PlayerController : MonoBehaviour {
         [field: SerializeField] public PlayerInput Input { get; private set; }
     }

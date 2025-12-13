@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class SpreadGun : BaseGun {
         private int totalAmmo;
         private float totalSpreadAngle;

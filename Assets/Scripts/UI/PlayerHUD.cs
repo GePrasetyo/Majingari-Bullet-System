@@ -1,10 +1,10 @@
-using ShootingGames.GameState;
-using ShootingGames.Gun;
+using BulletSystem.GameState;
+using BulletSystem.Gun;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ShootingGames.UI {
+namespace BulletSystem.UI {
     public class PlayerHUD : MonoBehaviour {
         [SerializeField] private TextMeshProUGUI stageScoreText;
         [SerializeField] private TextMeshProUGUI comboText;

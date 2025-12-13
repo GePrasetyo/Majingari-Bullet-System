@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     [CreateAssetMenu(fileName = "Spread Fire Factory", menuName = "Shooting Games Scriptable/Fire/Spread Fire Factory")]
     public class SpreadFireFactory : GunFireFactory, IFireFactory<ForwardProjectile> {
         [SerializeField] private Transform visualProjectilePrefab;

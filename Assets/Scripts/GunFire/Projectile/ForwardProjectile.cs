@@ -1,7 +1,7 @@
-using ShootingGames.Pool;
+using Majingari.Framework.Pool;
 using UnityEngine;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class ForwardProjectile : Fire {
         private Transform prefabKey;
         private Transform projectileTransform;

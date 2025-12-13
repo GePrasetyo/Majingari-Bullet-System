@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
-using ShootingGames.Utils;
+using Majingari.Framework;
 
-namespace ShootingGames.Movement {
+namespace BulletSystem.Movement {
     [Serializable]
     public abstract class PostMovementAdjuster {
         public abstract void PostMovement();

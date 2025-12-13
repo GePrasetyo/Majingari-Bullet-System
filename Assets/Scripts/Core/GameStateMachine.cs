@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ShootingGames.GameState {
+namespace BulletSystem.GameState {
     public class GameStateMachine : MonoBehaviour {
         [SerializeField] private State[] states;
         private Dictionary<StateLoop, State> stateMap = new Dictionary<StateLoop, State>();

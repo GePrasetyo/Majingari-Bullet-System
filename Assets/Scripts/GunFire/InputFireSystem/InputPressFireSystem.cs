@@ -1,7 +1,7 @@
 
 using UnityEngine.InputSystem;
 
-namespace ShootingGames.Gun {
+namespace BulletSystem.Gun {
     public class InputPressFireSystem : InputFireSystem {
         public InputPressFireSystem(InputActionReference playerInput) : base() {
             this.playerInput = playerInput;
