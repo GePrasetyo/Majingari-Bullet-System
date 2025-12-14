@@ -1,5 +1,5 @@
 using BulletSystem.Gun;
-using Majingari.Framework.Pool;
+using Majinfwork.Pool;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;

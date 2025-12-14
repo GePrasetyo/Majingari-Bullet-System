@@ -1,5 +1,6 @@
 using BulletSystem.Movement;
-using Majingari.Framework;
+using Majinfwork;
+using Majinfwork.World;
 using System;
 using UnityEngine;
 

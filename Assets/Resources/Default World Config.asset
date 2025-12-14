@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc71d2dd54e4894c8d69b075fd66b63, type: 3}
+  m_Name: Default World Config
+  m_EditorClassIdentifier: 
+  mapList:
+  - Map: {fileID: 102900000, guid: 7af3d7e397483c249a6cb39cb3bdc4f9, type: 3}
+    mapName: Main
+    TheGameMode: {fileID: 11400000, guid: 8c58efb347734c04e94e3f3c67c93510, type: 2}
+  levelStreamCollection: []
+  loadingHandler:
+    rid: 5399962516390150420
+  references:
+    version: 2
+    RefIds:
+    - rid: 5399962516390150420
+      type: {class: DefaultLoadingStreamer, ns: Majinfwork.World, asm: Majinfwork}
+      data:
+        _fadeSpeed: 1

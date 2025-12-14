@@ -1,12 +1,13 @@
 using BulletSystem.GameState;
 using BulletSystem.Gun;
 using BulletSystem.Movement;
-using Majingari.Framework;
-using Majingari.Framework.Pool;
 using BulletSystem.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Majinfwork;
+using Majinfwork.Pool;
+using Majinfwork.World;
 
 namespace BulletSystem {
     public class Player : Actor, IHitable {

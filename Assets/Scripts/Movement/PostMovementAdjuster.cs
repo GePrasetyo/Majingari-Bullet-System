@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using Majingari.Framework;
+using Majinfwork;
 
 namespace BulletSystem.Movement {
     [Serializable]

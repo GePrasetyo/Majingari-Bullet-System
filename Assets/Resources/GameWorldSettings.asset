@@ -11,18 +11,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9662db6688ec707408fe045371dc805f, type: 3}
   m_Name: GameWorldSettings
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Majinfwork::Majinfwork.World.GameWorldSettings
   classGameInstance:
-    rid: 5399962494358520024
-  worldConfigObject: {fileID: 0}
+    rid: 5399962516390150421
+  worldConfigObject: {fileID: 11400000, guid: 70929cda4c54a3346a14f7acb607b480, type: 2}
   preInitializeSciptableObjects: []
   editMode: 0
   references:
     version: 2
     RefIds:
-    - rid: 5399962494358520024
-      type: {class: PersistentGameInstance, ns: , asm: M_Framework}
+    - rid: 5399962516390150421
+      type: {class: PersistentGameInstance, ns: , asm: Majinfwork}
       data:
         stopLoadingOnSceneLoaded: 0
-        gameStateMachine: {fileID: 0}
+        gameStateMachine: {fileID: 9100000, guid: b74113afde003e64db1288a1110246b8, type: 2}
         GIName: 

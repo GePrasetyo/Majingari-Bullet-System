@@ -1,4 +1,4 @@
-using Majingari.Framework;
+using Majinfwork;
 using UnityEngine;
 
 namespace BulletSystem.Gun {

@@ -1,6 +1,6 @@
-using Majingari.Framework.Pool;
-using Majingari.Framework;
 using UnityEngine;
+using Majinfwork.Pool;
+using Majinfwork;
 
 namespace BulletSystem.Gun {
     public class RicochetProjectile : Fire {
