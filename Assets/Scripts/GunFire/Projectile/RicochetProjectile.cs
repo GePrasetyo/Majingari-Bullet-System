@@ -91,7 +91,7 @@ namespace BulletSystem.Gun {
 
         internal override void Release() {
             if (projectile != null) {
-                projectile.Release<TrailRenderer>(prefabKey);
+                projectile.ReleasePoolRef<TrailRenderer>(prefabKey);
                 projectile = null;
                 projectileTransform = null;
             }

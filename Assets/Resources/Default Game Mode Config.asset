@@ -11,18 +11,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9900589bcb8e384cbe512dd4fe701d4, type: 3}
   m_Name: Default Game Mode Config
-  m_EditorClassIdentifier: 
-  _gameState: {fileID: 0}
-  _hudManager: {fileID: 0}
-  _inputManager: {fileID: 0}
-  _playerController: {fileID: 0}
-  _playerState: {fileID: 0}
-  _playerPawn: {fileID: 0}
+  m_EditorClassIdentifier: Majinfwork::Majinfwork.World.GameModeManager
+  _gameState: {fileID: 86021242892760675, guid: bbf9fc5cf18647f4995f2073ef012be0, type: 3}
+  _hudManager: {fileID: 625991006022897025, guid: d7b97f8a61c59d64ab69482510c98842, type: 3}
+  _playerController: {fileID: 5549934156278107198, guid: 8e356d6633348374089042d801e81bc6, type: 3}
+  _playerState: {fileID: 332159044407938444, guid: d47303a974eb1cf4fbca8a26a0c78395, type: 3}
+  _playerPawn: {fileID: 2742704364158259185, guid: 8570cb9f7dbe58a4c9693f36b860c378, type: 3}
+  _playerInput: {fileID: 1426101070296381843, guid: 68ea609562c808247a5e8859c3b95d89, type: 3}
   cameraHandler:
-    rid: 5399962503644971008
+    rid: 5399962746326352438
   references:
     version: 2
     RefIds:
-    - rid: 5399962503644971008
-      type: {class: DefaultCameraHandler, ns: Majingari.Framework, asm: M_Framework}
+    - rid: 5399962746326352438
+      type: {class: CameraHandlerNone, ns: Majinfwork, asm: Majinfwork}
       data: 

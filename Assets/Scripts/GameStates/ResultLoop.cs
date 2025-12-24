@@ -1,45 +1,43 @@
 using BulletSystem.UI;
+using Majinfwork.Pool;
+using Majinfwork.StateGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Majinfwork.Pool;
 
 namespace BulletSystem.GameState {
     /// <summary>
     /// Result Screen Loop
     /// </summary>
-    public class ResultLoop : StateLoop {
+    public class ResultLoop : StateNodeAsset {
         [Header("UI")]
         public ResultHUD prefabResultHud;
         private ResultHUD resultHud;
 
         [Header("Input")]
-        [SerializeField] private InputActionReference inputActionStart;
-        [SerializeField] private InputActionReference inputActionEsc;
+        [SerializeField] private InputActionProperty inputActionStart;
+        [SerializeField] private InputActionProperty inputActionEsc;
 
-        public override void StartState() {
-            base.StartState();
-
-            if (prefabResultHud.InstantiatePoolRef(out resultHud)) {
-                GameStats lastStats = GameInstance.Instance.Stats.Clone();
-                resultHud.Setup(lastStats);
-                resultHud.gameObject.SetActive(true);
-            }
+        public override void Begin() {
+            //if (prefabResultHud.InstantiatePoolRef(out resultHud)) {
+            //    GameStats lastStats = GameInstance.Instance<SpaceShipGame>().Stats.Clone();
+            //    resultHud.Setup(lastStats);
+            //    resultHud.gameObject.SetActive(true);
+            //}
         }
 
-        public override void Running() {
-            if (inputActionStart.action.triggered) {
-                request = StateRequest.Complete;
-            }
+        public override void Tick() {
+            //if (inputActionStart.action.triggered) {
+            //    request = StateRequest.Complete;
+            //}
 
-            if (inputActionEsc.action.triggered) {
-                request = StateRequest.Cancel;
-            }
+            //if (inputActionEsc.action.triggered) {
+            //    request = StateRequest.Cancel;
+            //}
         }
 
-        public override void StopState() {
-            base.StopState();
+        public override void End() {
 
-            resultHud.Release<ResultHUD>(prefabResultHud);
+            resultHud.ReleasePoolRef<ResultHUD>(prefabResultHud);
             resultHud = null;
         }
     }

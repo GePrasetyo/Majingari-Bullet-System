@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-388951547258519796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d9835b8498cc74facb29c8db339a1c, type: 3}
+  m_Name: TitleScreen
+  m_EditorClassIdentifier: Assembly-CSharp::BulletSystem.GameState.TitleScreen
+  guid: ae2661d0-c97b-4082-be9d-95b1ef79315d
+  position: {x: 349, y: -490}
+  prefabTitleHud: {fileID: 8162620911059625368, guid: 27c596d266ef5eb4e9d430fc38a2c2c2, type: 3}
+  inputActionStart:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Start
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d343a386-0f26-49bd-be75-28356928543e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5755556613131612465, guid: fd3deaf5a7c08144cb440f12e8440670, type: 3}
+  toGame:
+    targetNodeGuid: fc3aee7b-86f8-4d6f-8a10-0124aa00a61a
+    targetState: {fileID: 3865513956157333185}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c244204d8e079442872b6727eb68fb0, type: 3}
+  m_Name: GameStateMachine
+  m_EditorClassIdentifier: Majinfwork::Majinfwork.GameStateMachineGraph
+  entryNodeGuid: 74f54068-4aad-41e8-b68e-a087c7907247
+  allStates:
+  - {fileID: -388951547258519796}
+  - {fileID: 3865513956157333185}
+  - {fileID: 6675466411818421416}
+  SharedAsset: 0
+--- !u!114 &3865513956157333185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b85b9a263787b54d90d2ce68d506f61, type: 3}
+  m_Name: StageLoop
+  m_EditorClassIdentifier: Assembly-CSharp::BulletSystem.GameState.StageLoop
+  guid: fc3aee7b-86f8-4d6f-8a10-0124aa00a61a
+  position: {x: 884, y: -490}
+  prefabPlayer: {fileID: 8345280602849411046, guid: 6ac43da3da70c1a4e97cf724e73a4dd7, type: 3}
+  prefabEnemySpawner: {fileID: -2756452676086639708, guid: 67832a5cc26e2c343b585b1715f75afc, type: 3}
+  inputActionEscape:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Input Action Escape
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 977716ec-6de0-4c9a-98bb-8856e27e0520
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 9586a227-2918-45ee-a34f-5f04ff448375
+        m_Path: 
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Input Action Escape
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: -6897476112717911873, guid: fd3deaf5a7c08144cb440f12e8440670, type: 3}
+  musicBpm: 0
+  audioSource: {fileID: 0}
+  spawningInterval:
+    step: 0
+  pushSignal:
+    step: 0
+  beat:
+    step: 0
+  backToTitle:
+    targetNodeGuid: 
+    targetState: {fileID: 0}
+  toResult:
+    targetNodeGuid: 
+    targetState: {fileID: 0}
+--- !u!114 &6675466411818421416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef6bbfcfaa136b42a77c05217a727b6, type: 3}
+  m_Name: LoadLevel
+  m_EditorClassIdentifier: Majinfwork::Majinfwork.LoadLevel
+  guid: 74f54068-4aad-41e8-b68e-a087c7907247
+  position: {x: 62, y: -490}
+  map:
+    Map: {fileID: 102900000, guid: 7af3d7e397483c249a6cb39cb3bdc4f9, type: 3}
+    mapName: Main
+  onComplete:
+    targetNodeGuid: ae2661d0-c97b-4082-be9d-95b1ef79315d
+    targetState: {fileID: -388951547258519796}

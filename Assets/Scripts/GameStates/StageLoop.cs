@@ -1,5 +1,6 @@
 using BulletSystem.Gun;
 using Majinfwork.Pool;
+using Majinfwork.StateGraph;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,18 +9,18 @@ namespace BulletSystem.GameState {
     /// <summary>
     /// Stage main loop
     /// </summary>
-    public class StageLoop : StateLoop {
+    public class StageLoop : StateNodeAsset {
         [Header("Prefab")]
         public Player prefabPlayer;
         private Player player;
         public EnemySpawner prefabEnemySpawner;
         private EnemySpawner enemySpawner;
 
-        [Header("Layout")]
-        public Transform stageTransform;
+        //[Header("Layout")]
+        //public Transform stageTransform;
 
         [Header("Input")]
-        [SerializeField] private InputActionReference inputActionEscape;
+        [SerializeField] private InputActionProperty inputActionEscape;
 
         [Header("Music")]
         [SerializeField] private float musicBpm;
@@ -28,19 +29,21 @@ namespace BulletSystem.GameState {
         [SerializeField] private Interval pushSignal;
         [SerializeField] private Interval beat;
 
-        public override void StartState() {
-            base.StartState();
+        public StateTransition backToTitle;
+        public StateTransition toResult;
+
+        public override void Begin() {
             SetupStage();
             audioSource.Play();
         }
 
-        public override void Running() {
+        public override void Tick() {
             if (inputActionEscape.action.triggered) {
-                request = StateRequest.Cancel;
+                TriggerExit(backToTitle);
             }
 
             if(player.health <= 0 || !audioSource.isPlaying) {
-                request = StateRequest.Complete;
+                TriggerExit(toResult);
             }
 
             spawningInterval.CheckForNewInterval(audioSource, musicBpm);
@@ -48,34 +51,33 @@ namespace BulletSystem.GameState {
             beat.CheckForNewInterval(audioSource, musicBpm);
         }
 
-        public override void StopState() {
-            base.StopState();
+        public override void End() {
             CleanupStage();
             audioSource.Stop();
         }
 
         private void SetupStage() {
-            GameInstance.Instance?.Stats.ResetScore();
-            PlayerController pc = GameInstance.Instance.PlayerController;
+            //SpaceShipGame.Instance<SpaceShipGame>()?.Stats.ResetScore();
+            //PlayerController pc = SpaceShipGame.Instance<SpaceShipGame>().PlayerController;
 
-            if (prefabPlayer.InstantiatePoolRef(stageTransform, out player)) {
-                player.transform.position = new Vector3(0, -4, 0);
-                player.Initialize(pc, pushSignal);
-            }
+            //if (prefabPlayer.InstantiatePoolRef(stageTransform, out player)) {
+            //    player.transform.position = new Vector3(0, -4, 0);
+            //    player.Initialize(pc, pushSignal);
+            //}
 
-            if (prefabEnemySpawner.InstantiatePoolRef(stageTransform, out enemySpawner)) {
-                spawningInterval.trigger += enemySpawner.Spawn;
-                enemySpawner.SetEvent(pushSignal, beat);
-            }
+            //if (prefabEnemySpawner.InstantiatePoolRef(stageTransform, out enemySpawner)) {
+            //    spawningInterval.trigger += enemySpawner.Spawn;
+            //    enemySpawner.SetEvent(pushSignal, beat);
+            //}
         }
 
         void CleanupStage() {
-            player.Release<Player>(prefabPlayer);
+            player.ReleasePoolRef<Player>(prefabPlayer);
             player = null;
 
             spawningInterval.trigger -= enemySpawner.Spawn;
             enemySpawner.Disable();
-            enemySpawner.Release<EnemySpawner>(prefabEnemySpawner);
+            enemySpawner.ReleasePoolRef<EnemySpawner>(prefabEnemySpawner);
             enemySpawner = null;
 
             spawningInterval.Clear();

@@ -1,10 +1,12 @@
+using Majinfwork;
+
 namespace BulletSystem.Gun {
     public abstract class GunFireSystem : ITickObject {
         public virtual void Initialize() {
-            GameInstance.Instance.RegisterTick(this);
+            //ServiceLocator.Resolve<TickSignal>().RegisterTick(this);
         }
         public virtual void Disable() {
-            GameInstance.Instance.UnRegisterTick(this);
+            //ServiceLocator.Resolve<TickSignal>().UnRegisterTick(this);
         }
 
         public abstract void Fire(ProjectileData rawData);

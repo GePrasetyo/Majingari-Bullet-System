@@ -44,7 +44,7 @@ namespace BulletSystem.Gun {
         }
 
         internal override void Release() {
-            projectileTransform.Release<Transform>(this.prefabKey);
+            projectileTransform.ReleasePoolRef<Transform>(this.prefabKey);
             projectileTransform = null;
         }
     }

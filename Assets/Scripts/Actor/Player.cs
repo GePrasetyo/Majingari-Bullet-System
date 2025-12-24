@@ -57,8 +57,8 @@ namespace BulletSystem {
                 currentInputGun.InputTick(currentGun, out InputFireStatus fireStatus);
                 hud.Initialize(new PlayerHUDModel() {
                     healthPercentage = health / maxHealth,
-                    gameScore = GameInstance.Instance?.Stats?.gameScore ?? 0,
-                    gameCombo = GameInstance.Instance?.Stats?.combo ?? 0,
+                    gameScore = GameInstance.Instance<SpaceShipGame>()?.Stats?.gameScore ?? 0,
+                    gameCombo = GameInstance.Instance<SpaceShipGame>()?.Stats?.combo ?? 0,
                     gunIndex = gunIndex,
                 }, fireStatus, beatInterval);
             }
@@ -96,8 +96,8 @@ namespace BulletSystem {
 
             hud.RefreshUI(new PlayerHUDModel() {
                 healthPercentage = health / maxHealth,
-                gameScore = GameInstance.Instance?.Stats?.gameScore ?? 0,
-                gameCombo = GameInstance.Instance?.Stats?.combo ?? 0,
+                gameScore = GameInstance.Instance<SpaceShipGame>()?.Stats?.gameScore ?? 0,
+                gameCombo = GameInstance.Instance<SpaceShipGame>()?.Stats?.combo ?? 0,
                 gunIndex = gunIndex,
             });
         }
@@ -115,7 +115,7 @@ namespace BulletSystem {
             inputGunSystems.Clear();
 
             hud.Disable();
-            hud.Release<PlayerHUD>(prefabHud);
+            hud.ReleasePoolRef<PlayerHUD>(prefabHud);
             hud = null;
         }
 
@@ -138,7 +138,7 @@ namespace BulletSystem {
 
         public void ApplyDamage(float value) {
             health = Mathf.Max(health - value, 0);
-            GameInstance.Instance?.Stats.ResetCombo();
+            GameInstance.Instance<SpaceShipGame>()?.Stats.ResetCombo();
         }
 
         public void ResetStats() {

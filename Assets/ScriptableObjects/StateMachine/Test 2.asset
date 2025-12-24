@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5688165477691960358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d63b1877aaea6489210daa49a67c7e, type: 3}
+  m_Name: WaitState
+  m_EditorClassIdentifier: MStateGraph::Majinfwork.StateGraph.WaitState
+  guid: d9d1500a-19c5-42b4-8718-adebb16bca1d
+  position: {x: 707, y: -93}
+  Exit:
+    targetNodeGuid: eb878dcd-33d6-4a69-84cc-2c03b54f2a43
+    targetState: {fileID: 854559605202610366}
+  waitTime: 2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded2a12c7f1150f4a81c2b85efbaad4c, type: 3}
+  m_Name: Test 2
+  m_EditorClassIdentifier: MStateGraph::Majinfwork.StateGraph.StateGraphAsset
+  entryNodeGuid: d9d1500a-19c5-42b4-8718-adebb16bca1d
+  allStates:
+  - {fileID: 854559605202610366}
+  - {fileID: -5688165477691960358}
+  - {fileID: 4472078766995404917}
+  - {fileID: 4136288795747991963}
+  - {fileID: 7130464589849342402}
+  SharedAsset: 0
+--- !u!114 &854559605202610366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c7c6623ddfed84a92f9708432da79b, type: 3}
+  m_Name: FlipFlopState
+  m_EditorClassIdentifier: MStateGraph::Majinfwork.StateGraph.FlipFlopState
+  guid: eb878dcd-33d6-4a69-84cc-2c03b54f2a43
+  position: {x: 1040, y: -93}
+  ExitA:
+    targetNodeGuid: 75ae3f38-c046-4fe1-9d9c-64ccf7087d30
+    targetState: {fileID: 4472078766995404917}
+  ExitB:
+    targetNodeGuid: 40bb3e3e-5f39-4cac-ab32-6ffd98c13274
+    targetState: {fileID: 7130464589849342402}
+  index: 0
+--- !u!114 &4136288795747991963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d63b1877aaea6489210daa49a67c7e, type: 3}
+  m_Name: WaitState
+  m_EditorClassIdentifier: MStateGraph::Majinfwork.StateGraph.WaitState
+  guid: 72baeddd-ee43-440a-a310-4c2dd47e6df0
+  position: {x: 1770, y: 60}
+  Exit:
+    targetNodeGuid: eb878dcd-33d6-4a69-84cc-2c03b54f2a43
+    targetState: {fileID: 854559605202610366}
+  waitTime: 2
+--- !u!114 &4472078766995404917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d2e4b9094cb0d44b612c41c1045ca0, type: 3}
+  m_Name: LogState
+  m_EditorClassIdentifier: MStateGraph::Majinfwork.StateGraph.LogState
+  guid: 75ae3f38-c046-4fe1-9d9c-64ccf7087d30
+  position: {x: 1331, y: -161}
+  Exit:
+    targetNodeGuid: 72baeddd-ee43-440a-a310-4c2dd47e6df0
+    targetState: {fileID: 4136288795747991963}
+  message: A Test 1
+  logColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &7130464589849342402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d2e4b9094cb0d44b612c41c1045ca0, type: 3}
+  m_Name: LogState
+  m_EditorClassIdentifier: MStateGraph::Majinfwork.StateGraph.LogState
+  guid: 40bb3e3e-5f39-4cac-ab32-6ffd98c13274
+  position: {x: 1394, y: 188}
+  Exit:
+    targetNodeGuid: 72baeddd-ee43-440a-a310-4c2dd47e6df0
+    targetState: {fileID: 4136288795747991963}
+  message: Baaaa
+  logColor: {r: 1, g: 0, b: 0, a: 1}

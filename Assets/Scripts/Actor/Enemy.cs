@@ -90,7 +90,7 @@ namespace BulletSystem {
         }
 
         public void OnHit() {
-            GameInstance.Instance?.Stats.AddScore(m_score);
+            GameInstance.Instance<SpaceShipGame>()?.Stats.AddScore(m_score);
             SetStatus(BeatStatus.Active);
         }
 

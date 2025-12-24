@@ -2,7 +2,6 @@ using BulletSystem.GameState;
 using Majinfwork.Pool;
 using System.Collections.Generic;
 using UnityEngine;
-
 using Random = UnityEngine.Random;
 
 namespace BulletSystem {
@@ -14,7 +13,6 @@ namespace BulletSystem {
 
         private Interval pushSignal;
         private Interval beatSignal;
-
         public void SetEvent(Interval push, Interval beat) {
             pushSignal = push;
             beatSignal = beat;
@@ -46,7 +44,7 @@ namespace BulletSystem {
             pushSignal.trigger -= enemy.Push;
             beatSignal.trigger -= enemy.Pulse;
 
-            enemy.Release<Enemy>(prefabEnemy);
+            enemy.ReleasePoolRef<Enemy>(prefabEnemy);
             enemies.Remove(enemy);
         }
 

@@ -13,16 +13,15 @@ MonoBehaviour:
   m_Name: GameWorldSettings
   m_EditorClassIdentifier: Majinfwork::Majinfwork.World.GameWorldSettings
   classGameInstance:
-    rid: 5399962516390150421
+    rid: 5399962746326351942
   worldConfigObject: {fileID: 11400000, guid: 70929cda4c54a3346a14f7acb607b480, type: 2}
   preInitializeSciptableObjects: []
   editMode: 0
   references:
     version: 2
     RefIds:
-    - rid: 5399962516390150421
-      type: {class: PersistentGameInstance, ns: , asm: Majinfwork}
+    - rid: 5399962746326351942
+      type: {class: SpaceShipGame, ns: BulletSystem, asm: Assembly-CSharp}
       data:
-        stopLoadingOnSceneLoaded: 0
-        gameStateMachine: {fileID: 9100000, guid: b74113afde003e64db1288a1110246b8, type: 2}
-        GIName: 
+        stopLoadingOnSceneLoaded: 1
+        gameStateMachine: {fileID: 11400000, guid: 05ebbcccb587c8546a1fed764b1244f2, type: 2}

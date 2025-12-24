@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Basic Gun Factory
   m_EditorClassIdentifier: 
   playerInput: {fileID: 5848464432263504142, guid: fd3deaf5a7c08144cb440f12e8440670, type: 3}
-  <bulletLifeTime>k__BackingField: 4
-  <bulletSpeed>k__BackingField: 12
+  bulletLifeTime: 4
+  bulletSpeed: 8
   visualProjectilePrefab: {fileID: 4133279169528168646, guid: 908a62bfa743ad2498188e1e2ec30be6, type: 3}
